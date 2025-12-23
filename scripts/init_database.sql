@@ -30,3 +30,5 @@ GO
 
 CREATE DATABASE DataWarehouse;
 
+USE DataWarehouse;
+
