@@ -32,3 +32,5 @@ CREATE DATABASE DataWarehouse;
 
 USE DataWarehouse;
 
+-- Create Schemas
+
