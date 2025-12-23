@@ -34,3 +34,6 @@ USE DataWarehouse;
 
 -- Create Schemas
 
+CREATE SCHEMA bronze;
+GO
+
