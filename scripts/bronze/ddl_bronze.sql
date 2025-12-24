@@ -58,3 +58,6 @@ CREATE TABLE bronze.erp_loc_a101 (
     cntry NVARCHAR (50)
 );
 
+IF OBJECT_ID('bronze.erp_cust_az12', 'U') IS NOT NULL
+    DROP TABLE bronze.erp_cust_az12;
+
