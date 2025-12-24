@@ -35,3 +35,6 @@ CREATE TABLE bronze.crm_prd_info (
     prd_end_dt DATETIME
 );
 
+IF OBJECT_ID('bronze.crm_sales_details', 'U') IS NOT NULL
+    DROP TABLE bronze.crm_sales_details;
+
