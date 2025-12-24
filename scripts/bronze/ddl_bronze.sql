@@ -50,3 +50,6 @@ CREATE TABLE bronze.crm_sales_details (
     sls_price INT
 )
 
+IF OBJECT_ID('bronze.erp_loc_a101', 'U') IS NOT NULL
+    DROP TABLE bronze.erp_loc_a101;
+
