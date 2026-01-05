@@ -29,3 +29,7 @@ BEGIN
     BEGIN TRY
         SET @batch_start_time = GETDATE();
 
+        PRINT '===========================================';
+        PRINT 'Loading Bronze Layer';
+        PRINT '===========================================';
+
