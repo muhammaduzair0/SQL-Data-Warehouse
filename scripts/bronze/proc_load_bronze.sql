@@ -26,3 +26,6 @@ BEGIN
         @batch_start_time DATETIME,
         @batch_end_time DATETIME;
 
+    BEGIN TRY
+        SET @batch_start_time = GETDATE();
+
