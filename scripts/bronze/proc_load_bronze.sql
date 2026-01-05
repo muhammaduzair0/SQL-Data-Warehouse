@@ -42,3 +42,8 @@ BEGIN
         PRINT '>> Truncating Table: bronze.crm_cust_info';
         TRUNCATE TABLE bronze.crm_cust_info;
 
+        PRINT '>> Inserting Data: bronze.crm_cust_info';
+        BULK INSERT bronze.crm_cust_info
+        FROM 'F:\Data Analytics\Projects\SQL-Data-Warehouse\datasets\source_crm\cust_info.csv'
+        WITH (FIRSTROW = 2, FIELDTERMINATOR = ',', TABLOCK);
+
