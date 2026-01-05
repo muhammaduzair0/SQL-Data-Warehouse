@@ -47,3 +47,8 @@ BEGIN
         FROM 'F:\Data Analytics\Projects\SQL-Data-Warehouse\datasets\source_crm\cust_info.csv'
         WITH (FIRSTROW = 2, FIELDTERMINATOR = ',', TABLOCK);
 
+        SET @end_time = GETDATE();
+        PRINT '>> Load Duration: ' 
+            + CAST(DATEDIFF(SECOND, @start_time, @end_time) AS NVARCHAR) + ' seconds';
+        PRINT '----------------';
+
