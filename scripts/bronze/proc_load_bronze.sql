@@ -85,3 +85,9 @@ FROM silver.crm_prd_info
 GROUP BY prd_id
 HAVING COUNT(*) > 1 OR prd_id IS NULL
 
+-- Check for unwanted Spaces
+-- Expectation: No Results
+SELECT cst_key
+FROM silver.crm_cust_info
+WHERE cst_key != TRIM(cst_key)
+
