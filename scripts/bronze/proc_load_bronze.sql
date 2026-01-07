@@ -63,3 +63,14 @@ BEGIN
             + CAST(DATEDIFF(SECOND, @batch_start_time, @batch_end_time) AS NVARCHAR) + ' seconds';
         PRINT '===================================';
     END TRY
+    BEGIN CATCH
+        PRINT '==========================================';
+        PRINT 'ERROR OCCURRED DURING LOADING BRONZE LAYER';
+        PRINT 'Message : ' + ERROR_MESSAGE();
+        PRINT 'Number  : ' + CAST(ERROR_NUMBER() AS NVARCHAR);
+        PRINT 'State   : ' + CAST(ERROR_STATE() AS NVARCHAR);
+        PRINT '==========================================';
+    END CATCH
+END;
+
+
