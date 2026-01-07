@@ -91,3 +91,10 @@ SELECT cst_key
 FROM silver.crm_cust_info
 WHERE cst_key != TRIM(cst_key)
 
+-- Data Standardization & Consistency
+
+SELECT DISTINCT cst_gndr
+FROM silver.crm_cust_info
+
+
+SELECT * FROM silver.crm_prd_info
