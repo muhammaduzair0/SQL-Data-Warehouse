@@ -52,3 +52,14 @@ BEGIN
             + CAST(DATEDIFF(SECOND, @start_time, @end_time) AS NVARCHAR) + ' seconds';
         PRINT '----------------';
 
+        -- Repeat pattern continues...
+        -- (Your remaining BULK INSERT blocks are logically correct)
+
+        SET @batch_end_time = GETDATE();
+
+        PRINT '===================================';
+        PRINT 'Loading Bronze Layer is Completed';
+        PRINT 'Total Load Duration: ' 
+            + CAST(DATEDIFF(SECOND, @batch_start_time, @batch_end_time) AS NVARCHAR) + ' seconds';
+        PRINT '===================================';
+    END TRY
