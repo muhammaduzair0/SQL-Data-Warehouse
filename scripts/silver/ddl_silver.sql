@@ -9,3 +9,6 @@ Script Purpose:
 ===============================================================================
 */
 
+IF OBJECT_ID('silver.crm.cust.info', 'U') IS NOT NULL
+    DROP TABLE silver.crm_cust_info;
+
