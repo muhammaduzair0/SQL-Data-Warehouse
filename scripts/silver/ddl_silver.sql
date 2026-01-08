@@ -38,3 +38,6 @@ CREATE TABLE silver.crm_prd_info (
     dwh_create_date DATETIME2 DEFAULT GETDATE()
 );
 
+IF OBJECT_ID('silver.crm_sales_details', 'U') IS NOT NULL
+    DROP TABLE silver.crm_sales_details;
+
