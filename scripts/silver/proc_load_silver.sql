@@ -172,3 +172,13 @@ BEGIN
     PRINT '>> Load Duration: ' + CAST(DATEDIFF(SECOND, @start_time, @end_time) AS NVARCHAR) + ' seconds';
     PRINT '>> -------------';
 
+    -- Loading erp_cust_az12
+    SET @start_time = GETDATE();
+	PRINT '>> Truncating Table: silver.erp_cust_az12';
+	TRUNCATE TABLE silver.erp_cust_az12;
+	PRINT '>> Inserting Data Into: silver.erp_cust_az12';
+    INSERT INTO silver.erp_cust_az12(
+        cid,
+        bdate,
+        gen
+    )
