@@ -36,3 +36,14 @@ BEGIN
     PRINT '>> Truncating Table: silver.crm_cust_info';
     TRUNCATE TABLE silver.crm_cust_info;
 
+    PRINT '>> Inserting Data Into: silver.crm_cust_info';
+    INSERT INTO
+        silver.crm_cust_info (
+            cst_id,
+            cst_key,
+            cst_firstname,
+            cst_lastname,
+            cst_material_status,
+            cst_gndr,
+            cst_create_date
+        )
