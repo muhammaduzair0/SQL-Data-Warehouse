@@ -31,3 +31,8 @@ BEGIN
     PRINT 'Loading CRM Tables';
     PRINT '------------------------------------------------------';
 
+    -- Loading silver.crm_cust_info
+    SET @start_time = GETDATE();
+    PRINT '>> Truncating Table: silver.crm_cust_info';
+    TRUNCATE TABLE silver.crm_cust_info;
+
