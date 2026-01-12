@@ -18,3 +18,16 @@ EXEC Silver.load_silver;
 ===============================================================================
  */
 
+CREATE OR ALTER PROCEDURE silver.load_silver AS
+BEGIN
+    BEGIN TRY
+    DECLARE @start_time DATETIME, @end_time DATETIME, @batch_start_time DATETIME, @batch_end_time DATETIME;
+    SET @batch_start_time = GETDATE();
+    PRINT '======================================================';
+    PRINT 'Loading Silver Layer';
+    PRINT '======================================================';
+
+    PRINT '------------------------------------------------------';
+    PRINT 'Loading CRM Tables';
+    PRINT '------------------------------------------------------';
+
