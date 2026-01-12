@@ -84,3 +84,17 @@ BEGIN
     PRINT '>> Load Duration: ' + CAST(DATEDIFF(SECOND, @start_time, @end_time) AS NVARCHAR) + ' seconds'
     PRINT '>> -------------';
 
+    -- Loading silver.crm_prd_info
+    SET @start_time = GETDATE();
+    PRINT '>> Truncating Table: silver.crm_prd_info'
+    INSERT INTO
+        silver.crm_prd_info (
+            prd_id,
+            cat_id,
+            prd_key,
+            prd_nm,
+            prd_cost,
+            prd_line,
+            prd_start_dt,
+            prd_end_dt
+        )
